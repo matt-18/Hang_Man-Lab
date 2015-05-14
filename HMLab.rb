@@ -1,48 +1,8 @@
-
 puts "Welcome to Hangman?"
-words = %w"pencilcase jolly jeans computer sweater sneaker color white television class clock earth search database telephone kilogram walk locker machine"
+words = %w"pencilcase jolly jeans computer sweater sneaker color white television class clock earth search database telephone kilogram walk locker machine screen master earth starting settings apple morning night afternoon octagon circle container coffee weight trash hangman"
 total_chances = 5
 number_incorrect = 0
 right_guess = ' '
-
-if number_incorrect == 0
-  puts "   ______    "
-end
-
-if number_incorrect == 1
-  puts "   ______    "
-  puts '         |         '
-end
-
-if number_incorrect == 2
-  puts "   ______    "
-  puts '         |         '
-  puts "         O         "
-end
-
-if number_incorrect == 3
-  puts "   ______    "
-  puts '         |         '
-  puts "         O         "
-  puts '        /|\          '
-end
-
-if number_incorrect == 4
-  puts "   ______    "
-  puts '         |         '
-  puts "         O         "
-  puts '        /|\          '
-  puts "         |         "
-end
-
-if number_incorrect == 5
-  puts "   ______    "
-  puts '         |         '
-  puts "         O         "
-  puts '        /|\          '
-  puts "         |         "
-  puts '        / \           '
-end
 
 survived = <<WIN
  0    0
@@ -89,6 +49,44 @@ while true
     puts "Sorry! The word doesn't contain '#{char}'"
     number_incorrect + 1
     number_incorrect += 1
+    if number_incorrect == 0
+      puts "   ______    "
+    end
+
+    if number_incorrect == 1
+      puts "   ______    "
+      puts '         |         '
+    end
+
+    if number_incorrect == 2
+      puts "   ______    "
+      puts '         |         '
+      puts "         O         "
+    end
+
+    if number_incorrect == 3
+      puts "   ______    "
+      puts '         |         '
+      puts "         O         "
+      puts '        /|\          '
+    end
+
+    if number_incorrect == 4
+      puts "   ______    "
+      puts '         |         '
+      puts "         O         "
+      puts '        /|\          '
+      puts "         |         "
+    end
+
+    if number_incorrect == 5
+      puts "   ______    "
+      puts '         |         '
+      puts "         O         "
+      puts '        /|\          '
+      puts "         |         "
+      puts '        / \           '
+    end
 
     if (number_incorrect == total_chances)
       puts "Sorry, you were hanged. :("
